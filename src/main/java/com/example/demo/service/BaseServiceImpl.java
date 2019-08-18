@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class BaseServiceImpl implements BaseService {
+public class BaseServiceImpl<Base> implements BaseService<Base> {
 
 	private BaseRepository baseRepository;
 
@@ -24,6 +24,11 @@ public class BaseServiceImpl implements BaseService {
 	public List<Base> findAllBase() {
 		// TODO Auto-generated method stub
 		return (List<Base>) baseRepository.findAll();
+	}
+
+	@Override
+	public List<Base> findAllT() {
+		return null;
 	}
 
 	@Override
